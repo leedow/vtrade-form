@@ -1,0 +1,23 @@
+{
+  "name": "vtrade-table",
+  "version": "1.0.0",
+  "description": "为数据分析和数据持久化而设计的虚拟表单",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test  --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leedow/vtrade-table.git"
+  },
+  "keywords": [
+    "javascript",
+    "table"
+  ],
+  "author": "leedow",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leedow/vtrade-table/issues"
+  },
+  "homepage": "https://github.com/leedow/vtrade-table#readme"
+}
