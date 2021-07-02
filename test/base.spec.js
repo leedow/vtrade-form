@@ -18,7 +18,7 @@ describe('测试base',function(){
 			two: 4
 		}
 	const row3 = {
-			one: {event:'event', value:1, params: 1},
+			one: {event:'event', value:1, params: 1, color:'#fff'},
 			two: 2
 		}
 
@@ -55,6 +55,7 @@ describe('测试base',function(){
 
 
 	it('getData',function(){
+		console.log(JSON.stringify(base.getData()))
 		assert.deepEqual( base.getData(), {
 			cols: cols.map(col=>col.name),
 			rows: [

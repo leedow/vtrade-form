@@ -10,13 +10,23 @@ module.exports = class Col {
 		this.datas = options.datas||null // 附加参数
 
 		//this.options = options
+		this.configs = ['name', 'group', 'event', 'params', 'value', 'datas']
+		this.copyOptions(options)
+	}
+
+	copyOptions(options) {
+	  for(let key in options) {
+	   	if(!this[key]) {
+	   		this[key] = options[key]
+	   		this.configs.push(key)
+	   	}
+	  }
 	}
 
 	getJson() {
 		let json = {}
-		let configs = ['name', 'group', 'event', 'params', 'value', 'datas']
 
-		configs.forEach(config => {
+		this.configs.forEach(config => {
 			if(this[config]) json[config] = this[config]
 		})
 
@@ -25,6 +35,5 @@ module.exports = class Col {
 		} else {
 			return json
 		}
-
 	}
 } 
