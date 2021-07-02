@@ -12,6 +12,13 @@ module.exports = class Table {
   }
 
   setCols(cols) {
+    this.cols = []
+    cols.forEach(col => {
+      this.cols.push(new Col(col))
+    })
+  }
+
+  appendCols(cols) {
     cols.forEach(col => {
       this.cols.push(new Col(col))
     })
@@ -20,8 +27,9 @@ module.exports = class Table {
   /*
    * @row {key: value||{event, value, params, group, datas}} 其中key为cols的id
    */
-  addRow(row) {
+  addRow(row, id) {
   	this.rows.push(new Row({
+      id,
       cols: row
     }))
   }
@@ -38,9 +46,11 @@ module.exports = class Table {
     return res
   }
 
-  /*
-   * 根据指定的group获取
-   */
+
+  getRowById(rowId) {
+    return this.rows.find(row => row.id == rowId)
+  }
+
  
 
   /*

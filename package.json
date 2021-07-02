@@ -1,6 +1,6 @@
 {
   "name": "vtrade-table",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "为数据分析和数据持久化而设计的虚拟表单",
   "main": "index.js",
   "scripts": {
