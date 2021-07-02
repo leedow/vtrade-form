@@ -49,7 +49,7 @@ describe('测试base',function(){
 		assert.deepEqual( base.rows.length, 3)
 		assert.deepEqual( base.rows[base.rows.length-1].cols.length, 2)
 
-		 
+		
 	})
 
 
@@ -70,6 +70,12 @@ describe('测试base',function(){
 	it('getColsById',function(){
 		assert.deepEqual( base.getColsById('one').length, 3)
 	})
+
+	it('print',function(){
+		base.print()
+	})
+
+	 
  
 
 })

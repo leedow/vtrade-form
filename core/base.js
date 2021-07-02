@@ -75,5 +75,22 @@ module.exports = class Table {
   	}
   }
 
+  /*
+   * 打印表格
+   */
+   print() {
+      let format = this.getData()
+      let data = format.rows
+      data.forEach((row, i) => {
+        row.forEach((col, i2) => {
+          if(typeof col == 'object') {
+            data[i][i2] = JSON.stringify(col)
+          }
+        })
+      })
+      data.unshift(format.cols)
+      console.table(data)
+   }
+
 
 }
